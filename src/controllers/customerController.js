@@ -106,7 +106,7 @@ const loginCustomer = (req, res) => {
     if (error) {
       return res.status(400).json(error.detail);
     } else {
-      //   console.log(results.rows[0].admin_password); //return hash password of the login admin
+      //   console.log(results.rows[0].admin_password); //return hash password of the logged in admin
       password = results.rows[0].customer_password;
     }
     const match = await bcrypt.compare(customer_password, password); //compare hash to real password, will get true if match

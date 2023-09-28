@@ -13,7 +13,7 @@ router.get("/customer/:id", getSingleCustomer);
 router.post("/customer", createCustomers);
 router.post("/login", loginCustomer);
 
-router.get("/admin", (req, res) => {
+router.get("/customer", (req, res) => {
   res.send("We're in customer route");
 });
 
